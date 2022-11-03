@@ -3,6 +3,14 @@
     (replacing the placeholder with your Github name):
     https://api.github.com/users/<your name>
 */
+import axios from 'axios';
+
+axios.get('https://api.githum.com/users/texirae');
+  .then(resp => {
+    console.log(resp);
+  })
+
+  .catch(err => console.error(err));
 
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
@@ -11,6 +19,7 @@
 
     Skip to STEP 3 (line 34).
 */
+
 
 /*
   STEP 4: Pass the data received from Github into your function,
@@ -29,6 +38,16 @@
 */
 
 const followersArray = [];
+
+function githubCard(gitInfo) {
+  const card = document.createElement('div');
+  const img = document.createElement('img');
+  const cardInfo = document.createElement('div');
+  const name = document.createElement('h3');
+  const username = document.createElement('p');
+  const location = document.createElement('p');
+  const profile = document.createElement('p');
+}
 
 /*
   STEP 3: Create a function that accepts a single object as its only argument.
