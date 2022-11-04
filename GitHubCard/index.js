@@ -12,14 +12,13 @@ for(let i = 0; i<followersArray.length; i++){
 }
 
 function getGitCard(username){
-  axios.get(`https://api.githum.com/users/${username}`);
+  axios.get(`https://api.githum.com/users/${username}`)
   .then(resp => {
     document.querySelector('.cards').appendChild(githubCard(resp.data));
   })
 
   .catch(err => console.error(err));
 }
-
 
 
 /*
